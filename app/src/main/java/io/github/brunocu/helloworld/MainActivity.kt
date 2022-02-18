@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val userInput = findViewById<EditText>(R.id.editText)
         val button = findViewById<Button>(R.id.button)
+        val clearButton = findViewById<Button>(R.id.clearButton)
         textView = findViewById<TextView>(R.id.textView)
 
         textView?.text = ""
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
                 userInput.text.clear()
             }
         })
+
+        clearButton?.setOnClickListener { textView?.text = "" }
     }
 
     override fun onStart() {
